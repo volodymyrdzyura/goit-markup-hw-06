@@ -400,11 +400,9 @@
     <!--Футер-->
     <footer>
       <section class="contact">
-          <div class="container">
-            <div class="lacate">
-          <a href="./index.html" class="logo"
-          ><span class="logo-web">Web</span>Studio</a
-        >
+        <div class="container">
+         <div class="lacate">
+          <a href="./index.html" class="logo"><span class="logo-web">Web</span>Studio</a>
         <address>
           <ul>
             <li class="address">
@@ -426,7 +424,7 @@
             </li>
           </ul>
         </address>
-            </div>
+           </div>
            <div class="social">
             <h3>Присоединайтесь</h3>  
             <ul class="social-link">
@@ -461,17 +459,82 @@
                 </a>
             </li>
             </ul>
+           </div>
+           <div class="add-me">              
+            <h2 class="">Подпишитесь на рассылку</h2>
+            <div class="add-box">
+            <form action="js-add">               
+              <label class="client-data" for="e-mail"></label>
+              <input class:="add-field" type="email" name="name" id="e-mail" placeholder="E-mail">
+            </form>            
+             <button class="button-add" type="submit">
+              <p>Подписаться</p>
+                <svg class="flight-send" width="24px" height="24px">
+                <use href="./images/symbol-defs.svg#flight-send"></use>
+                </svg>
+            </div>             
             </div>
-          </div>
-        </section>  
+        </div>
+      </section>  
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="round-button">
           <svg class="cross" width="11px" height="11px">
-            <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+            <use href="./images/symbol-defs.svg#icon-cross"></use>
           </svg>
-        </button>
+       </button>       
+        <form class="js-client-data">
+          <div>
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          </div>
+          <div class="role-groupe" role="groupe">
+            <div class="data-box">
+              <label class="client-data" for="name">Имя</label autocomplete="on" >  
+              <input class:="data-field" type="text" name="name" id="name" />
+                <svg class="icon-box" width="12px" height="12px">
+                 <use href="./images/symbol-defs.svg#icon-man"></use>
+                </svg>
+            </div>
+            <div class="data-box">
+              <label class="client-data" for="phone-number">Телефон</label>
+              <input class:="data-field" type="tel" name="name" id="phone-number" />
+                <svg class="icon-box" width="13px" height="13px">
+                 <use href="./images/symbol-defs.svg#icon-phone_tube"></use>
+                </svg>
+            </div>
+            <div class="data-box">
+              <label class="client-data" for="e-mail">Почта</label>
+              <input class:="data-field" type="email" name="name" id="e-mail"/>
+                <svg class="icon-box" width="15px" height="12px">
+                 <use href="./images/symbol-defs.svg#icon-letter"></use>
+                </svg>
+            </div>
+            <div class="data-box">
+              <label class="client-data" for="comment">Комментарий</label>
+              <textarea  name="feedback" rows="5" class="feedback" id="comment" placeholder="Введите текст"></textarea>
+            </div>
+          </div>              
+          <div class="agreement">
+            <input class:="checkbox" type="checkbox" name="" id="agreement-line">
+
+<!--
+              <svg class="icon-check_bar" width="16px" height="15px">
+                <use href="./images/symbol-defs.svg#icon-check_bar"></use>
+              </svg>
+
+              <svg class="icon-check_bar_p" width="16px" height="15px">
+                <use href="./images/symbol-defs.svg#icon-check_bar_p"></use>
+              </svg>
+
+            -->
+
+            
+            <label  for="agreement-line"><p class="agreement-box">Соглашаюсь с рассылкой и принимаю <span><a class="agreement-down" href="./portfolio.html">Условия договора</a></span>
+            </p></label>                      
+          </div>             
+        <button class="button-sub" type="submit"><p>Отправить</p></button> 
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
