@@ -21,7 +21,6 @@
       rel="stylesheet"
       href="https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css"
     />
-
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -397,6 +396,7 @@
         </section>
 
     </main>
+
     <!--Футер-->
     <footer>
       <section class="contact">
@@ -460,10 +460,11 @@
             </li>
             </ul>
            </div>
+           
            <div class="add-me">              
             <h2 class="">Подпишитесь на рассылку</h2>
             <div class="add-box">
-            <form action="js-add">               
+            <form action="js-add" autocomplete="off">               
               <label class="client-data" for="e-mail"></label>
               <input class:="add-field" type="email" name="name" id="e-mail" placeholder="E-mail">
             </form>            
@@ -477,14 +478,18 @@
         </div>
       </section>  
     </footer>
+
+    <!--backdrop-->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="round-button">
           <svg class="cross" width="11px" height="11px">
             <use href="./images/symbol-defs.svg#icon-cross"></use>
           </svg>
-       </button>       
-    <form class="js-client-data">
+       </button>   
+      <!--form-->       
+    <form class="js-client-data" autocomplete="off">
         <div>
           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
         </div>
@@ -528,6 +533,7 @@
       </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

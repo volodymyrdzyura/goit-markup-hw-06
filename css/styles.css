@@ -721,23 +721,21 @@ ul.projects {
 .round-button {
   display: block;
   position: absolute;
-  content: "";
   top: 8px;
   right: 8px;
-  padding: 0%;
-  margin: 0%;
+  padding: 0px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: solid 1px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .cross {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: contain;
   vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
   fill: #757575;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -821,12 +819,12 @@ ul.projects {
 }
 
 input:hover + .icon-box,
- .icon-box:hover {
+input:focus + .icon-box,
+.icon-box:hover {
   fill: var(--hover-text-color);
 }
 
-.data-box input,
-.feedback {
+.data-box input {
   box-sizing: border-box;
   width: 448px;
   height: 40px;
@@ -850,6 +848,14 @@ input:hover + .icon-box,
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
   padding: 12px 16px;
+}
+
+.feedback::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .data-box input:hover,
@@ -921,7 +927,6 @@ input:hover + .icon-box,
   height: 15px;
   border-radius: 4px;
   border: solid 1px var(--primery-texy-color);
-  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
   vertical-align: middle;
 }
 
