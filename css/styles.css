@@ -804,8 +804,13 @@ ul.projects {
   height: 58px;
 }
 
+.data-box-feed {
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .data-field input {
-  position: relative
+  position: relative;
 }
 
 .icon-box {
@@ -813,35 +818,11 @@ ul.projects {
   left: 15px;
   bottom: 9px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
-input:hover+.icon-box {
+input:hover + .icon-box {
   fill: var(--hover-text-color);
 }
-
-.checkbox {
-  box-sizing: border-box;
-  width: 16px;height: 15px;
-}
-
-/*
-.icon-check_bar {
-opacity: 1;
-}
-
-input .checkbox:active+.icon-check_bar {
-  opacity: 0;
-  }
-
-.icon-check_bar_p {
-  opacity: 1;
-}
-
-input:active+.icon-check_bar_p {
-  opacity: 1;
- }
-*/
-
 
 .data-box input,
 .feedback {
@@ -857,17 +838,18 @@ input:active+.icon-check_bar_p {
 }
 
 .feedback {
-  width: 100%;
+  box-sizing: border-box;
+  width: 448px;
   height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0px;
+  margin-top: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
   padding: 12px 16px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  }
-
+}
 
 .data-box input:hover,
 .feedback:hover,
@@ -879,7 +861,7 @@ input:active+.icon-check_bar_p {
 .button-sub:hover,
 .button-sub:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-  1px 4px 6px rgba(0, 0, 0, 0.16);
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .client-data {
@@ -902,7 +884,6 @@ input:active+.icon-check_bar_p {
   background-color: var(--hover-text-color);
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-
 }
 
 .button-sub p {
@@ -913,34 +894,51 @@ input:active+.icon-check_bar_p {
   letter-spacing: 0.06em;
 }
 
-.agreement {
- display: flex;
- position: absolute;
- bottom: 120px;
- left: 54px;
- align-items: center;
- align-content: center;
- width: 424px;
- margin-top: 10px;
-}
-
-.agreement-box {
- font-weight: 400;
- font-size: 14px;
- line-height: 24px;
- letter-spacing: 0.03em;
- color: var(--secondary-text-color);
+.agreement-line {
+  display: block;
+  position: absolute;
+  bottom: 120px;
+  left: 52px;
+  width: auto;
+  align-items: center;
+  align-content: center;
+  margin-top: 10px;
 }
 
 .checkbox {
-  padding: 0px;
-  display: flex;
-  position: absolute;
-  bottom: 120px;
+  appearance: none;
+  display: inline-block;
+  margin: 0px;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  margin: 0px;
+  margin-right: 8.38px;
   width: 16px;
   height: 15px;
-  padding-left: 0px;
-  margin: 0px 0px 0px 0px;
+  border-radius: 4px;
+  border: solid 1px var(--primery-texy-color);
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+  vertical-align: middle;
+}
+
+.checkbox:checked + .icon-checkbox {
+  display: inline-block;
+  background-color: var(--hover-text-color);
+  background-image: url(../images/icon\ check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--hover-text-color);
+}
+
+.agreement-text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
 
 .agreement-down {
@@ -968,15 +966,6 @@ input:active+.icon-check_bar_p {
   color: var(--absolut-white-header);
 }
 
-.add-field .placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
- }
-
 .button-add {
   position: relative;
   display: flex;
@@ -987,7 +976,7 @@ input:active+.icon-check_bar_p {
   border: none;
   margin-left: 12px;
   cursor: pointer;
-  padding: 0px;   
+  padding: 0px;
 }
 
 .button-add > p {
@@ -998,19 +987,15 @@ input:active+.icon-check_bar_p {
   letter-spacing: 0.06em;
   padding: 0px 0px 0px 29px;
   align-self: center;
-  color: var(--absolut-white-header); 
+  color: var(--absolut-white-header);
 }
 
 .flight-send {
   position: absolute;
   align-self: center;
   right: 28px;
-  
-  fill: var(--absolut-white-header)
-}
 
-.button-add:hover+.flight-send {
-  fill: red;
+  fill: var(--absolut-white-header);
 }
 
 .add-box input {
