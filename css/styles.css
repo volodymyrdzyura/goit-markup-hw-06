@@ -907,12 +907,13 @@ input:hover + .icon-box {
 
 .checkbox {
   appearance: none;
-  display: inline-block;
+  position: absolute;
   margin: 0px;
 }
 
 .icon-checkbox {
   display: inline-block;
+  box-sizing: border-box;
   margin: 0px;
   margin-right: 8.38px;
   width: 16px;
