@@ -719,7 +719,9 @@ ul.projects {
 }
 
 .round-button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -733,7 +735,6 @@ ul.projects {
 }
 
 .cross {
-  vertical-align: middle;
   background-repeat: no-repeat;
   background-size: contain;
   fill: #757575;
@@ -851,6 +852,8 @@ input:focus + .icon-box,
 }
 
 .feedback::placeholder {
+  font-family: 'Roboto';
+    font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
